@@ -22,12 +22,12 @@ int	main(int argc, char **argv)
 	int		base[4][4];
 	int		views[16];
 
+	arg = argv[1];
 	if (argc != 2 || !parse_input(arg, views))
 	{
 		ft_putstr("Invalid arguments\n");
 		return (0);
 	}
-	arg = argv[1];
 	init_grid(base);
 	if (solve(base, 0, views))
 		print_grid(base);
